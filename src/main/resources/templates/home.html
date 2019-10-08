@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments :: head">
+</head>
+<body>
+<div th:replace="fragments :: header"></div>
+
+<div class="content">
+    <h1 style="text-align: center" class="mt-4">NAJLEPSZE PRZEPISY</h1>
+
+    <div th:each="recipe: ${recipes}">
+        <h2 th:text="${recipe.name}"></h2>
+        <p th:text="|Liczba głosów: ${recipe.likeCounter}|"></p>
+    </div>
+
+    <a href="/">Zobacz wszystkie dostępne samochody</a>
+
+</div>
+
+</body>
+</html>
