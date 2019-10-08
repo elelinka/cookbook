@@ -17,14 +17,13 @@ public class Recipe {
 
     private int likeCounter;
 
+    private String img;
+
     @OneToMany(mappedBy = "recipe")
     private List<Ingredient> ingredients;
 
     @ManyToOne
     private RecipeCategory recipeCategory;
-
-    @OneToMany(mappedBy = "recipe")
-    private List<RecipeImage> images;
 
     public Long getId() {
         return id;
@@ -74,12 +73,12 @@ public class Recipe {
         this.recipeCategory = recipeCategory;
     }
 
-    public List<RecipeImage> getImages() {
-        return images;
+    public String getImg() {
+        return img;
     }
 
-    public void setImages(List<RecipeImage> images) {
-        this.images = images;
+    public void setImg(String img) {
+        this.img = img;
     }
 }
 

@@ -11,13 +11,30 @@
 
 <div th:fragment="header">
 
-    <div class="header">
-        <div class="header-text">
-            <a href="/">
-                <h2>Smaki na każdy dzień</h2>
-            </a>
-        </div>
+    <div class="header-image">
+        <a href="/">
+            <img src="https://www.kwestiasmaku.com/sites/all/themes/custom/kwestiasmaku/logo.png" width="327px">
+        </a>
     </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><b>Dania główne</b> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><b>Makarony</b> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><b>Sałatki</b> <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#"><b>Desery</b> <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 </div>
 
 </body>
