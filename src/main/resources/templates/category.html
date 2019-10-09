@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments :: head">
+</head>
+<body>
+<div th:replace="fragments :: header"></div>
+
+<div class="content">
+    <h1 style="text-align: center" class="mt-4"></h1>
+
+    <div class="category-details">
+        <img th:src="${category.img}">
+        <h3 th:text="${category.description}"></h3>
+        <div class="category-details2">
+            <div th:each="recipe: ${recipesByCategory}" class="category-details-recipes">
+                <img class="category-details-img" th:src="${recipe.img}">
+                <p th:text="${recipe.name}"></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

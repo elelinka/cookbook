@@ -3,7 +3,7 @@
 }
 
 .nav-item {
-    margin-left: 230px;
+    margin-left: 200px;
 }
 
 .content {
@@ -17,10 +17,39 @@
 .recipe-details {
     display: flex;
     flex-direction: column;
-    align-items: baseline;
+    align-items: center;
+    align-content: center;
     margin: 30px;
 }
 
 .recipe-details img{
     width: 150px;
+}
+
+.category-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 30px;
+}
+
+.category-details2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    margin: 30px;
+}
+
+.category-details-recipes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 30px;
+}
+
+.category-details-img{
+    width: 200px;
 }
