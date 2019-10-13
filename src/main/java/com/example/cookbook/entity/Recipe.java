@@ -19,11 +19,28 @@ public class Recipe {
 
     private String img;
 
-    @OneToMany(mappedBy = "recipe")
+    @OneToMany(mappedBy = "recipe", cascade = CascadeType.ALL)
     private List<Ingredient> ingredients;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     private RecipeCategory recipeCategory;
+
+    public Recipe() {
+    }
+
+    public Recipe(String name, String description, String img, List<Ingredient> ingredients, RecipeCategory recipeCategory) {
+        this.name = name;
+        this.description = description;
+        this.img = img;
+        this.ingredients = ingredients;
+        this.recipeCategory = recipeCategory;
+    }
+
+    public Recipe(String name, String description, String img) {
+        this.name = name;
+        this.description = description;
+        this.img = img;
+    }
 
     public Long getId() {
         return id;

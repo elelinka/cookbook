@@ -13,8 +13,10 @@
         <h3 th:text="${category.description}"></h3>
         <div class="category-details2">
             <div th:each="recipe: ${recipesByCategory}" class="category-details-recipes">
-                <img class="category-details-img" th:src="${recipe.img}">
-                <p th:text="${recipe.name}"></p>
+                <a th:href="|/recipe/${recipe.id}|">
+                    <img class="category-details-img" th:src="${recipe.img}">
+                    <p th:text="${recipe.name}"></p>
+                </a>
             </div>
         </div>
     </div>

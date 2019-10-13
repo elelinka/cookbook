@@ -4,15 +4,24 @@
 </head>
 <body>
 <div th:replace="fragments :: header"></div>
+<div class="content-add">
+    <a href="/admin/add">
+        <div><img src="plus.png"></div>
+        <div><h4>Dodaj przepis</h4></div>
+    </a>
+</div>
+
+
 
 <div class="content">
     <h1 style="text-align: center" class="mt-4"></h1>
 
     <div th:each="recipe: ${all}" class="recipe-details">
-        <img th:src="${recipe.img}">
-        <p th:text="${recipe.name}"></p>
+        <a th:href="|/recipe/${recipe.id}|">
+            <img th:src="${recipe.img}">
+            <p th:text="${recipe.name}"></p>
+        </a>
     </div>
-
 </div>
 
 </body>

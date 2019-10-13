@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:include="fragments :: head">
+</head>
+<body>
+<div th:replace="fragments :: header"></div>
+
+<div class="add-form">
+    <form th:action="|/recipe/edit/${editRecipe.id}|" method="post" th:object="${editRecipe}">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Nazwa przepisu</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" th:field="*{name}">
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Opis</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                      th:field="*{description}"></textarea>
+        </div>
+        <div class="form-group" th:each="ingredient : ${ingredients}">
+            <label for="exampleFormControlTextarea2">Składnik</label>
+            <textarea class="form-control" id="exampleFormControlTextarea2" rows="1"
+                      th:text="${ingredient.description}"></textarea>
+        </div>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea3">Składnik</label>
+            <textarea class="form-control" id="exampleFormControlTextarea3" rows="1"
+                      th:field="*{recipeCategory.name}"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Edytuj</button>
+    </form>
+</div>
+
+</body>
+</html>
